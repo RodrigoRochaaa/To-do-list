@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../IMG/bmKdfs.png);
+    background-position: center;
+    background-size: cover;
+}
+
+button{
+    background-color: #ff9e1f;
+    color:#7e00f5;
+    border: 2px solid #7e00f5;
+    padding: .3rem .6rem;
+    cursor: pointer;  /* mãozinha quando passa o mouse*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /*Alinhar o item no*/
+    transition: 0.4s;
+}
+button:hover{
+    background-color: #0084ff; /*Quando passa o*/
+    
+}
+
+button :hover > i {
+    color: #fff;
+}
+
+button i{
+    color: #7e00f5;
+    font-weight: bold;
+    pointer-events: none;
+}
+input,
+select{
+    padding: .25rem 0.5rem;
+}
+.hide{
+    display: none;
+}
+/*To-do Header */
+.todo-contaier{                      /*Aqui criamos o container e a direção pra onde ele vai*/
+    max-width: 450px;
+    margin: 3rem auto; /*Direção pro lado*/
+    background-color: #008cff;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.todo-contaier header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ffbb00;
+}
+
+/*Todo form*/
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ffbb00;
+} 
+#todo-form p,
+#edit-form p{
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+.form-control{
+    display: flex; /*Deixar os botões do lado do p*/
+}
+.form-control input{
+    margin-right: 0.3rem; /*Espaçamento entre os botões*/
+    
+}
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+/*Todo toolbar*/
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ffbb00;
+    display: flex;
+}
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right:1px solid #ffbb00;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column; /*Deixar um do lado do outro em colunas*/
+}
+#search form{
+    display: flex;
+}
+#search input{
+    width: 100%;
+    margin-right: .3rem;
+}
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#filter select{
+    flex: 1;
+}
+/*Todo List*/
+.todo{
+    display: flex;
+    justify-content: space-around;/*Aqui eles ficam espaçados igualmente, de um lado o titulo e do outro o icone*/
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ffbb00;
+    transition: .3s;
+}
+.todo h3{
+    flex: 1;
+    font-size: .9rem;
+}
+.todo button{
+    margin-left: 0.4rem;/*Afastar os botões*/
+}
+.done{
+    background-color: #00529e;
+}
+.done h3{
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
